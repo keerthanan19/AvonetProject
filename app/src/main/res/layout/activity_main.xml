@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/allert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You are Reaching Max Limit"
+        android:textColor="#B8BD06"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent"
+        android:visibility="gone"/>
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/labelBarrier_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="allert," />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/chart1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelBarrier_des"/>
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="8dp"
+        android:layout_marginRight="5dp"
+        android:max="200"
+        android:paddingBottom="12dp"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar2"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="35dp"
+        android:layout_marginRight="5dp"
+        android:max="25"
+        android:visibility="gone"
+        android:paddingBottom="12dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

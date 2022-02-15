@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewExpenseActivity">
+
+    <TextView
+        android:id="@+id/description_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/description"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/description"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/description_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/labelBarrier_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="description_label,description" />
+
+    <TextView
+        android:id="@+id/type_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/type"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelBarrier_des"
+        app:layout_constraintRight_toLeftOf="@+id/type"/>
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/type"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/type_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelBarrier_des" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/labelBarrier_typ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="type_label,type" />
+
+    <TextView
+        android:id="@+id/date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelBarrier_typ"
+        app:layout_constraintRight_toLeftOf="@+id/date"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/date_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelBarrier_typ" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/labelBarrier_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="date_label,date" />
+
+    <TextView
+        android:id="@+id/amount_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/amount"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelBarrier_date"
+        app:layout_constraintRight_toLeftOf="@+id/amount"/>
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/amount"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/amount_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelBarrier_date" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/labelBarrier_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="amount_label,amount" />
+
+    <TextView
+        android:id="@+id/bill_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bill_no"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelBarrier_amount"
+        app:layout_constraintRight_toLeftOf="@+id/bill"/>
+
+    <TextView
+        android:id="@+id/bill"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bill_no"
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/bill_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelBarrier_amount" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/labelBarrier_bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="bill_label,bill" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

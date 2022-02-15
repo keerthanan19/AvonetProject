@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="expense_type" >
+        <item>Select Expense Type</item>
+        <item>Repair and Maintains</item>
+        <item>Food</item>
+        <item>Stationary</item>
+        <item>Food</item>
+        <item>Electricity </item>
+        <item>Phone Bill</item>
+        <item>Transportation</item>
+        <item>Rent and insurance</item>
+        <item>Marketing, advertising, and promotion</item>
+    </string-array>
+</resources>
